@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{name}}!!!</h1>
+<form action="add" method="post">
+    {% csrf_token %}
+    Enter 1st to add number: <input type="text" name="num1"><br>
+    Enter 2nd to add number: <input type="text" name="num2"><br>
+    Enter 1st to Product number:<input type="text" name="n1"><br>
+    Enter 2nd to productnumber:<input type="text" name="n2"><br>
+    <input type="submit"><br>
+</form>
+<form action="div">
+    Enter 1st to division number:<input type="text" name="v1"><br>
+    Enter 2nd to division number:<input type="text" name="v2"><br>
+    <input type="submit"><br>
+</form>
+<form action="sub">
+    Enter 1st to subtraction number:<input type="text" name="s1"><br>
+    Enter 2nd to subtraction number:<input type="text" name="s2"><br>
+    <input type="submit"><br>
+</form>
+<h2>{{end}}</h2>
+{% endblock %}
